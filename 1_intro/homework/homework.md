@@ -42,6 +42,22 @@ What is version of the package *wheel* ?
 - 1.0.0
 - 23.0.1
 - 58.1.0
+>Answer:
+```
+The version of the wheel package installed in the python:3.9 Docker image is 0.45.1, which is not listed in the provided options.
+
+```
+>Full output for wheel package version:
+```
+@pdiveesh ➜ /workspaces/Zoomcamp2025_DE/1_intro (main) $ docker run -it --entrypoint bash python:3.9
+root@c4629b961978:/# pip list
+Package    Version
+---------- -------
+pip        23.0.1
+setuptools 58.1.0
+wheel      0.45.1
+
+```
 
 
 # Prepare Postgres
