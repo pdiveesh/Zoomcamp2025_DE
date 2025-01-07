@@ -1,7 +1,7 @@
  docker run -it \
 >     -e POSTGRES_USER="root" \
 >     -e POSTGRES_PASSWORD="root" \
->     -e POSTGRES_DB="db_taxi" \
+>     -e POSTGRES_DB="ny_taxi" \
 >     -v $(pwd)/1_intro/ny_taxi_postgres_new_data:/var/lib/postgresql/data \
 >     -p 5432:5432 \
 >     postgres:13
@@ -11,4 +11,8 @@
 
 You can now start the database server using:
 
-    pg_ctl -D /var/lib/postgresql/data -l logfile start
+ to open db:   
+pgcli -h localhost -p 5432 -u root -d ny_taxi
+
+dataset-link:wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz 
+colum-definitions: https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf
