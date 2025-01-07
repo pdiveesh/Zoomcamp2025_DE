@@ -1,0 +1,14 @@
+ docker run -it \
+>     -e POSTGRES_USER="root" \
+>     -e POSTGRES_PASSWORD="root" \
+>     -e POSTGRES_DB="db_taxi" \
+>     -v $(pwd)/1_intro/ny_taxi_postgres_new_data:/var/lib/postgresql/data \
+>     -p 5432:5432 \
+>     postgres:13
+
+
+//To run postgres locally
+
+You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgresql/data -l logfile start
